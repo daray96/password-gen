@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Generador de Password</title>
+    <link href="https://fonts.googleapis.com/css?family=Prompt:300|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilosGenerador.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    
+</head>
+<body>
+  
+<div class="container">
+  
+   <div class="titulo">
+        GENERADOR DE PASSWORD
+   </div>
+   
+   <form action="" class="app" id="app">
+       
+        <div class="fila numero-caracteres">
+           
+            <div class="col">
+                <label for="numero-caracteres">Numero de caracteres</label>
+            </div>
+            
+            
+            <div class="col botones">
+               
+                <div>
+                    <button class="btn" id="btn-menos-uno"><i class="fas fa-minus"></i></button>
+                </div>
+                
+                <div>
+                    <input type="text" id="numero-caracteres" readonly value="12">
+                </div>
+                
+                <div>
+                    <button class="btn" id="btn-mas-uno"><i class="fas fa-plus"></i></button>
+                </div>
+                
+            </div>
+        </div>   
+        
+        
+        <div class="fila simbolos">
+           
+            <div class="col">
+                <label for="simbolos">Incluir Simbolos?</label>
+            </div>
+            
+            <div class="col">
+                <button class="btn" id="btn-simbolos"><i class="fas fa-check"></i></button>
+            </div>
+            
+        </div>
+        
+        
+        <div class="fila numeros">
+            
+            <div class="col">
+                <label for="numeros">Incluir Numeros?</label>
+            </div>
+            
+            <div class="col">
+                <button class="btn" id="btn-numeros"><i class="fas fa-check"></i></button>
+            </div>
+            
+        </div>
+        
+        
+        <div class="fila mayusculas">
+            
+            <div class="col">
+                <label for="mayusculas">Incluir Mayusculas?</label>
+            </div>
+            
+            <div class="col">
+                <button class="btn" id="btn-mayusculas"><i class="fas fa-check"></i></button>
+            </div>
+            
+        </div>
+        
+        
+        <div class="fila generar">
+            
+            <div class="col">
+                <button class="btn btn-generar" id="btn-generar">Generar <i class="fas fa-key"></i></button>
+            </div>
+            
+            <div class="col">
+                <input type="text" class="password" id="password" readonly value="Nuevo Password">
+            </div>
+            
+        </div>
+        
+        <div class="fila alerta">
+            <div class="col">
+                <div class="alerta-copiado" id="alerta-copiado">
+                    <p><i class="fas fa-copy"></i> Password copiado</p>
+                </div>
+            </div>
+        </div>
+
+   </form>
+</div>   
+   
+    <script src="js/appGenerador.js">
+    
+    </script>
+</body>
+<footer>Creado por David Aray</footer>
+</html>

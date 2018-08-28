@@ -1,0 +1,289 @@
+/*    ESTILOS GENERALES: ;*/
+
+*{    
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+*::selection{
+    background:blue;
+    color:white;
+}
+*::-moz-selection{
+    background:blue;
+    color:white;
+}
+
+body{
+    background: #4A9472;
+    color:#FFF;
+}
+
+.container{
+    max-width: 500px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+footer{
+    color: white;
+    text-align: center
+}
+
+
+/* ESTILOS DE TITULO*/
+
+.titulo {
+    margin-bottom: 40px;
+    width: 100%;
+    font-family: 'Prompt', sans-serif;
+    font-size: 40px;
+    vertical-align: top;
+    text-align: center;
+}
+
+
+/* ESTILOS DE FILAS Y COLUMNAS  */
+
+.app .fila {
+	margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.app .col {
+	width: 50%;
+}
+
+
+/* ESTTILOS DE INPUTS Y BOTONES */
+
+.app label {
+	line-height: 40px;
+}
+
+.app input {
+	text-align: center;
+    border: none;
+    font-size: 20px;
+}
+
+.app .btn {
+	width: 100%;
+    background: #55CC90;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    vertical-align: top;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.app .btn:hover {
+	background: #6AFFB3;
+}
+
+.app .btn:focus{
+    outline: 0;
+}
+
+
+.app .btn-generar {
+	background: #657F72; 
+}
+
+
+
+/*FILA NUMERO DE CARACTERES*/
+
+.app .numero-caracteres .botones div{
+    width: 100%;
+}
+
+.app .numero-caracteres .botones div:nth-child(1) button {
+	border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.app .numero-caracteres .botones div:nth-child(3) button {
+	border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.app .numero-caracteres input {
+	width: 100%;
+    height: 40px;
+    cursor: default;
+}
+
+.app .numero-caracteres .botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/* FILAS DE OPCIONES*/
+
+
+
+
+
+/*FILA DE GENERAR PASSWORD*/
+
+.app .fila.generar {
+	margin-bottom: 10px; 
+}
+
+.app .fila.generar .col:nth-child(1) {
+	width: 30%;
+}
+
+.app .fila.generar .col:nth-child(2) {
+	width: 65%;
+}
+
+.app .fila.generar .btn.btn-generar {
+	width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 0;
+    line-height: 40px;
+    position: relative;
+}
+
+.app .fila.generar .btn.btn-generar:after{
+/*    ROMBO usando :after, es decir despues del boton generar*/
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    background: inherit;
+    /*MUY IMPORTANTE para posicionar el rombo, el boton generar tiene posicion relativa, y el rombo absoluta*/
+    position: absolute; 
+    top:13px;
+    right: -7px;
+}
+
+.app .fila.generar i {
+	font-size: 14px;
+    margin-left: 7px;
+    position: relative;
+    top: -1px;
+}
+
+.app .fila.generar input {
+	width: 100%;
+    height: 40px;
+    color: white;
+    background: none;
+    border: solid;
+    border-width: 2px;
+    border-color: #55CC90;
+    border-radius: 4px;
+}
+
+.app .fila.generar input:hover {
+    cursor: pointer;
+    transition:  all .3s ease;
+    border-color: #69FCB2;
+}
+
+.app .fila.generar input::selection{
+    background: inherit;
+}
+
+.app .fila.generar input::-moz-selection{
+    background: inherit;
+}
+
+
+/*ALERTA DE COPIADO*/
+
+.app .fila.alerta {
+	justify-content: flex-end;
+}
+
+.app .fila.alerta .col {
+	width: 65%;
+}
+
+.app .fila.alerta .alerta-copiado  {
+	text-align: center;
+    color: #4A9472;
+    transition: all .3s ease;
+}
+
+.app .fila.alerta .alerta-copiado p::selection, 
+.app .fila.alerta .alerta-copiado i::selection {
+    color: #4A9472;
+    background: none;
+}
+
+.app .fila.alerta .alerta-copiado.active  {
+    color: white;
+}
+
+.app .fila.alerta .alerta-copiado p, 
+.app .fila.alerta .alerta-copiado i {
+    font-size: 12px;
+}
+
+.app .fila.alerta .alerta-copiado p:hover, 
+.app .fila.alerta .alerta-copiado i:hover {
+    cursor: default;
+}
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 500px) {
+    .titulo {
+        font-size: 40px;
+    }
+    
+    .app .fila {
+	flex-direction: column;
+    margin-bottom: 20px;
+}
+    
+    .app .fila .col{
+        width: 100%;
+}
+    
+    .app .fila.generar {
+        padding-top: 20px;
+	    border-top: #69FCB2;
+        border-top-width: thin;
+        border-top-style: solid;
+}
+
+    .app .fila.generar .col:nth-child(1), 
+    .app .fila.generar .col:nth-child(2) {
+	    width: 100%;
+        margin-bottom: 16px;
+}
+    
+    .app .fila.generar .btn.btn-generar:after{
+        top:auto; /*vuelve a su valor por defecto*/
+        right:50%;
+        bottom: -7px;
+}    
+    
+    .app .fila.alerta .col {
+        width: 100%;
+    }
+    
+}
